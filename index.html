@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Website Landing Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fontiran.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            
+            <a href="#"><img src="image/logo.png" alt="logo"  class="logo"></a>
+            <div class="toggle" onclick="toggleMenu()"></div>
+            <ul class="navbar">
+                <li><a href="#">خانه</a></li>
+                <li><a href="#">منو</a></li>
+                <li><a href="#">اخبار</a></li>
+                <li><a href="#">تماس با ما</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>این فقط یک قهوه نیست<br> این هست<span class="star"> استارباکس</span></h2>
+                <p>
+                   لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را ت
+                </p>
+                <a href="#" class="learn-more">اطلاعات بیشتر</a>
+            </div>
+            <div class="imgBox">
+                <img src="image/img1.png" alt="starbucks" class="starbucks">
+            </div>
+        </div>
+        <div class="thumb">
+            <li><img src="image/thumb1.png" alt="thumb1" onclick="imgSlider('image/img1.png'); changeCircleColor('#017143')"></li>
+            <li><img src="image/thumb2.png" alt="thumb1" onclick="imgSlider('image/img2.png'); changeCircleColor('#eb7495')"></li>
+            <li><img src="image/thumb3.png" alt="thumb1" onclick="imgSlider('image/img3.png'); changeCircleColor('#d752b1')"></li>
+        </div>
+        <ul class="sci">
+            <li><a href="#"><img src="image/facebook.png" alt="facebook"></a></li>
+            <li><a href="#"><img src="image/twitter.png" alt="twitter"></a></li>
+            <li><a href="#"><img src="image/instagram.png" alt="instagram"></a></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+
+        function toggleMenu() {
+            let myToggle = document.querySelector('.toggle');
+            let navbar = document.querySelector('.navbar');
+
+            myToggle.classList.toggle('active');
+            navbar.classList.toggle('active');
+        }
+
+
+
+        function imgSlider(anything) {
+            document.querySelector('.starbucks').src = anything;
+            console.log("starbucks clicked!");
+        }
+
+        function changeCircleColor(color) {
+            const circle = document.querySelector('.circle');
+            circle.style.backgroundColor = color;
+            
+        }
+    </script>
+</body>
+</html>
